@@ -1,4 +1,4 @@
-package com.example.sqc.data.network
+package com.example.sqc.data.networkRetrofit
 
 import okhttp3.Interceptor
 import okhttp3.Response

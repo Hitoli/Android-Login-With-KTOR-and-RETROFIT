@@ -15,21 +15,21 @@ fun TestScreen(viewModel: MainViewModel= hiltViewModel()) {
     var text:String=""
 
     LaunchedEffect(key1 = Unit){
-        viewModel.data.collect{
-            when(it){
-                is Results.Success->{
-                    text = it.data.message.toString()
-                    Log.e("RESPONSE",it.data.message.toString())
-                }
-                is Results.Failure->{
-                    text = it.ErrorCode.toString()
-                    Log.e("RESPONSE",it.ErrorCode.toString())
-                }
-                Results.Loading->{
-                    text = "Loading"
-                }
-            }
+        Log.e("ViewModelRESPONSE",viewModel.data.toString())
+//        viewModel.data.collect{
+//            when(it){
+//                is Results.Success->{
+//                    text = it.data.message.toString()
+//                    Log.e("RESPONSE",it.data.message.toString())
+//                }
+//                is Results.Failure->{
+//                    text = it.ErrorCode.toString()
+//                    Log.e("RESPONSE",it.ErrorCode.toString())
+//                }
+//                Results.Loading->{
+//                    text = "Loading"
+//                }
+//            }
         }
     }
-    Text(text = text)
-}
+

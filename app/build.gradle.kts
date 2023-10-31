@@ -71,23 +71,35 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    //retofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
 
+    //okhttp
     implementation(platform("com.squareup.okhttp3:okhttp-bom:4.11.0"))
-
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
 
-
+    //daggerhilt
     implementation("com.google.dagger:hilt-android:2.48")
     ksp("com.google.dagger:hilt-android-compiler:2.48")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     // Navigation Compose
     implementation("androidx.navigation:navigation-compose:2.7.4")
+
+    //ktor
+    //kotlinx serialization
+    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
+    //ktor client, serialization and logging
+    implementation ("io.ktor:ktor-client-android:2.2.1")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.5")
+    implementation("io.ktor:ktor-client-logging:2.3.5")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.5")
+
 
 }

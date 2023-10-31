@@ -1,4 +1,4 @@
-package com.example.sqc.data.network
+package com.example.sqc.data.networkRetrofit
 
 import java.util.concurrent.TimeUnit
 import dagger.Module

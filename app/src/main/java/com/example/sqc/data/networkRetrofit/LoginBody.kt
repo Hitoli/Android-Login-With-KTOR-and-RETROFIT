@@ -1,6 +1,4 @@
-package com.example.sqc.data.network
-
-import javax.inject.Inject
+package com.example.sqc.data.networkRetrofit
 
 data class LoginBody(
     val email:String,

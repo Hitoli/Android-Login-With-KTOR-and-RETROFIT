@@ -11,7 +11,7 @@ fun<T> toResultFlow(call:suspend()-> Response<T>):Flow<Results<T>> = flow{
     try{
         if(response.isSuccessful){
             response.body()?.let {success->
-                emit(Results.Success(success))
+                //emit(Results.Success(success))
             }
         }else{
             response.body()?.let {Fail->
