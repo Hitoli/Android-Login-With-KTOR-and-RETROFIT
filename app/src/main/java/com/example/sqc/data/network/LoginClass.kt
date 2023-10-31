@@ -22,7 +22,7 @@ class LoginClass {
     @Provides
     @Singleton
     fun provideLoginBody():LoginBody{
-        return LoginBody(email = "tanya@singsys.com", password = "Lucknow@1")
+        return LoginBody(email = "email", password = "Password")
     }
 
     @Provides
