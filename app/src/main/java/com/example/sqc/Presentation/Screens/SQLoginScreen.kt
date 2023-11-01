@@ -2,6 +2,7 @@ package com.example.sqc.Presentation.Screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -23,9 +24,8 @@ import androidx.compose.ui.unit.dp
 import com.example.sqc.R
 import com.example.sqc.ui.theme.background
 
-@Preview(showBackground = true)
 @Composable
-fun SQCloneLoginScreen() {
+fun SQCloneLoginScreen(onLogin:()->Unit) {
     Column(
         modifier = Modifier
             .background(color = background)
@@ -42,7 +42,7 @@ fun SQCloneLoginScreen() {
         )
         Column {
             ElevatedButton(
-                onClick = { /*TODO*/ },
+                onClick = {/*TODO*/ },
                 modifier = Modifier.align(Alignment.CenterHorizontally), colors = ButtonDefaults.buttonColors(Color.White)
             ) {
                 Text(
@@ -59,11 +59,18 @@ fun SQCloneLoginScreen() {
             ) {
                 Text(text = "If you already have an account", color= Color.White)
                 Spacer(modifier = Modifier.size(8.dp))
-                Text(text = "LOGIN", color = Color.White, fontWeight = FontWeight.Bold)
+                Text(text = "LOGIN", color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.clickable {
+                    onLogin()
+                })
 
             }
 
         }
     }
 
+}
+@Preview(showBackground = true)
+@Composable
+fun PreviewScreenit() {
+    SQCloneLoginScreen(onLogin = {})
 }

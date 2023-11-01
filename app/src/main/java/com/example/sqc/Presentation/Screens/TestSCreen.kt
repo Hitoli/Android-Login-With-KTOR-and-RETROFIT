@@ -15,7 +15,7 @@ fun TestScreen(viewModel: MainViewModel= hiltViewModel()) {
     var text:String=""
 
     LaunchedEffect(key1 = Unit){
-        Log.e("ViewModelRESPONSE",viewModel.data.toString())
+      //  Log.e("ViewModelRESPONSE",viewModel.data.toString())
 //        viewModel.data.collect{
 //            when(it){
 //                is Results.Success->{

@@ -1,5 +1,6 @@
 package com.example.sqc.data.networkRetrofit
 
+import com.example.sqc.Presentation.utils.LoginInfo
 import java.util.concurrent.TimeUnit
 import dagger.Module
 import dagger.Provides
@@ -23,6 +24,12 @@ class LoginClass {
     @Singleton
     fun provideLoginBody():LoginBody{
         return LoginBody(email = "email", password = "Password")
+    }
+
+    @Provides
+    @Singleton
+    fun provideLoginInfo():LoginInfo{
+        return LoginInfo(email = "email", password = "Password")
     }
 
     @Provides
